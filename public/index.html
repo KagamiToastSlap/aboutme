@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" 
+integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <title>About Me</title>
+</head>
+<body>
+  <div class="container" ng-controller="AppCtrl">
+    <h1>About Me Alvin Tsui</h1>
+
+    <table class="table">
+	<thead>
+        <tr>
+		<th>Skill</th>
+        <th>&nbsp;</th>
+        </tr>
+      </thead>
+	  <tbody>
+        <tr ng-repeat="contact in aboutme">
+          <td>{{contact.skill}}</td>    
+        </tr>
+      </tbody>
+	  <thead>
+        <tr>
+		<th>Title</th>
+		<th>Description</th>
+        <th>&nbsp;</th>
+        </tr>
+      </thead>
+	  <tbody>
+        <tr ng-repeat="contact in aboutme">
+          <td>{{contact.title}}</td>
+		  <td>{{contact.product_description}}</td>		  
+        </tr>
+      </tbody>
+      <thead>
+        <tr>
+		<th>School</th>
+		<th>Degree</th>
+		<th>Year</th>
+        <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="contact in aboutme">
+          <td>{{contact.school}}</td>
+          <td>{{contact.degree}}</td>
+          <td>{{contact.last_year_properties}}</td>
+      
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="controllers/controller.js"></script>
+</body>
+</html>
